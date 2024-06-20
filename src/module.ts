@@ -1,33 +1,34 @@
 import defu from 'defu'
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
-import type { ModuleOptions } from './runtime/types.ts'
+import { defineNuxtModule, addPlugin, createResolver, addImportsDir } from '@nuxt/kit'
+import packageJSON from '../package.json'
+import { defaultOptions, type ModuleOptions } from './runtime/types'
 
 declare module '@nuxt/schema' {
-  interface ConfigSchema {
-    publicRuntimeConfig?: {
-      auth: ModuleOptions
-    }
+  interface PublicRuntimeConfig {
+    natlk: ModuleOptions
   }
   interface NuxtConfig {
-    auth?: ModuleOptions
+    natlk?: ModuleOptions
   }
   interface NuxtOptions {
-    auth?: ModuleOptions
+    natlk?: ModuleOptions
   }
 }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'my-module',
-    configKey: 'bak',
+    name: packageJSON.name,
+    configKey: 'natlk',
   },
-  defaults: {
-  },
+  defaults: defaultOptions,
   setup(_options, _nuxt) {
-    _nuxt.options.runtimeConfig.public.auth = defu(_nuxt.options.runtimeConfig.public.auth, { ..._options })
+    _nuxt.options.runtimeConfig.public.natlk = defu(_options, defaultOptions)
     const { resolve } = createResolver(import.meta.url)
-    addPlugin(resolve('./runtime/plugin'))
-    _nuxt.options.alias['#bak'] = resolve('./types')
-    _nuxt.options.build.transpile.push('#bak')
+    addImportsDir(resolve('./runtime/composables'))
+    addPlugin(resolve('./runtime/plugins/auth-fetch'))
+    addPlugin(resolve('./runtime/plugins/auth-middleware'))
+    addPlugin(resolve('./runtime/plugins/auth-directive'))
+    _nuxt.options.alias['#natlk'] = resolve('./runtime/types')
+    _nuxt.options.build.transpile.push('#natlk')
   },
 })

@@ -1,20 +1,32 @@
 export default defineNuxtConfig({
+  experimental: {
+    appManifest: false,
+  },
   modules: ['../src/module'],
   ssr: true,
-  bak: {
-    token: {
+  natlk: {
+    baseURL: '/api',
+    pages: {
+      unauthorized: '/401',
+    },
+    accessToken: {
       cookie: {
-        name: 'token',
-        maxAge: 365 * 24 * 60 * 60,
-        secure: false,
+        name: 'natlk.token',
       },
     },
-    refresh: {
+    refreshToken: {
+      paramName: 'refreshToken',
       cookie: {
-        name: 'refresh',
-        maxAge: 365 * 24 * 60 * 60,
-        secure: false,
+        name: 'natlk.refresh',
       },
+    },
+    cookie: {
+      path: '/',
+      domain: 'localhost',
+      httpOnly: false,
+    },
+    middleware: {
+      auth: { enable: true },
     },
   },
   devtools: { enabled: true },
