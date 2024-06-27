@@ -21,12 +21,13 @@
     "dist"
   ],
   "scripts": {
-    "pre:publish:github":"node ./scripts/github-package.js",
+    "pre:publish:github": "node ./scripts/github-package.js",
     "clean": "node scripts/rm.js .nuxt dist playground/.nuxt",
     "build": "nuxt-module-build build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "dev:vercel": "node playground/.vercel/output/functions/__nitro.func/index.mjs",
     "release": "changelogen --release --push",
     "lint": "eslint . --fix",
     "test": "vitest run --coverage",
@@ -64,5 +65,6 @@
     "typescript": "latest",
     "vitest": "^1.6.0",
     "vue-tsc": "^2.0.21"
-  }
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
 }
