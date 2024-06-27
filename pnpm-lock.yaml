@@ -35,9 +35,6 @@ importers:
       defu:
         specifier: ^6.1.4
         version: 6.1.4
-      esno:
-        specifier: ^4.7.0
-        version: 4.7.0
       jsonwebtoken:
         specifier: ^9.0.2
         version: 9.0.2
@@ -2590,10 +2587,6 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     hasBin: true
 
-  esno@4.7.0:
-    resolution: {integrity: sha512-81owrjxIxOwqcABt20U09Wn8lpBo9K6ttqbGvQcB3VYNLJyaV1fvKkDtpZd3Rj5BX3WXiGiJCjUevKQGNICzJg==}
-    hasBin: true
-
   espree@10.0.1:
     resolution: {integrity: sha512-MWkrWZbJsL2UwnjxTX3gG8FneachS/Mwg7tdGXce011sJd5b0JG54vat5KHnfSBODZ3Wvzd2WnjxyzsRoVv+ww==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -4623,11 +4616,6 @@ packages:
 
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
-
-  tsx@4.15.7:
-    resolution: {integrity: sha512-u3H0iSFDZM3za+VxkZ1kywdCeHCn+8/qHQS1MNoO2sONDgD95HlWtt8aB23OzeTmFP9IU4/8bZUdg58Uu5J4cg==}
-    engines: {node: '>=18.0.0'}
-    hasBin: true
 
   tuf-js@2.2.1:
     resolution: {integrity: sha512-GwIJau9XaA8nLVbUXsN3IlFi7WmQ48gBUrl3FTkkL/XLu/POhBzfmX9hd33FNMX1qAsfl6ozO1iMmW9NC8YniA==}
@@ -8122,10 +8110,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  esno@4.7.0:
-    dependencies:
-      tsx: 4.15.7
-
   espree@10.0.1:
     dependencies:
       acorn: 8.12.0
@@ -10365,13 +10349,6 @@ snapshots:
       typescript: 5.4.5
 
   tslib@2.6.3: {}
-
-  tsx@4.15.7:
-    dependencies:
-      esbuild: 0.21.5
-      get-tsconfig: 4.7.5
-    optionalDependencies:
-      fsevents: 2.3.3
 
   tuf-js@2.2.1:
     dependencies:
