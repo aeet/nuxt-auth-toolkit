@@ -27,7 +27,6 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "dev:vercel": "node playground/.vercel/output/functions/__nitro.func/index.mjs",
     "release": "changelogen --release --push",
     "lint": "eslint . --fix",
     "test": "vitest run --coverage",
