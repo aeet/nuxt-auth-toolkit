@@ -21,9 +21,11 @@ export default defineNuxtConfig({
       },
     },
     cookie: {
-      path: '/',
-      domain: 'localhost',
+      path: process.env.COOKIE_PATH || '/',
+      domain: process.env.COOKIE_DOMAIN || 'localhost',
+      secure: process.env.COOKIE_SECURE === 'true',
       httpOnly: false,
+      sameSite: process.env.COOKIE_SAMESITE === 'lax' ? 'lax' : 'none',
     },
     middleware: {
       auth: { enable: true },
