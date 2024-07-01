@@ -1,9 +1,9 @@
 import { unref } from 'vue'
+import type { RouteLocationNormalized } from 'vue-router'
 import { AuthStatus } from '../types'
 import { useAuthFailure } from '../composables/useAuthFailure'
 import { useAccessToken } from '../composables/useAccessToken'
 import { useRefreshToken } from '../composables/useRefreshToken'
-import type { RouteLocationNormalized } from '#vue-router'
 
 export default async function noTokenMiddleware(to: RouteLocationNormalized) {
   const { onAuthFailure } = useAuthFailure()

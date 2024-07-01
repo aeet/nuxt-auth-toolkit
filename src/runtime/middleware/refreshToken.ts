@@ -1,11 +1,11 @@
 import { unref } from 'vue'
+import type { RouteLocationNormalized } from 'vue-router'
 import { useRefresh } from '../composables/useRefresh'
 import { useReferer } from '../composables/useReferer'
 import { AuthStatus } from '../types'
 import { useAccessToken } from '../composables/useAccessToken'
 import { useRefreshToken } from '../composables/useRefreshToken'
 import { useAuthFailure } from '../composables/useAuthFailure'
-import type { RouteLocationNormalized } from '#vue-router'
 
 export default async function refreshTokenMiddleware(to: RouteLocationNormalized) {
   const { setReferer } = useReferer()

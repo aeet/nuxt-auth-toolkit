@@ -1,6 +1,6 @@
 import { unref } from 'vue'
+import { type RouteLocationNormalized } from 'vue-router'
 import { usePermission } from '../composables/usePermission.js'
-import { type RouteLocationNormalized } from '#vue-router'
 import { navigateTo, useNuxtApp } from '#imports'
 
 export default async function aclMiddleware(to: RouteLocationNormalized) {

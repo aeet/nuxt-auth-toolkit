@@ -1,9 +1,9 @@
+import { useRoute } from 'vue-router'
 import { AuthStatus } from '../types'
 import { useReferer } from './useReferer'
 import { useNatlkOptions } from './useNatlkOptions'
 import { useAccessToken } from './useAccessToken'
 import { useRefreshToken } from './useRefreshToken'
-import { useRoute } from '#vue-router'
 import { navigateTo, useNuxtApp } from '#imports'
 
 export const useAuthFailure = () => {

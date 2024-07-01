@@ -1,8 +1,8 @@
 import type { Directive } from 'vue'
 import { unref } from 'vue'
+import { useRoute } from 'vue-router'
 import { usePermission } from '../composables/usePermission'
 import { defineNuxtPlugin } from '#imports'
-import { useRoute } from '#vue-router'
 
 declare module 'vue' {
   interface ComponentCustomProperties {
