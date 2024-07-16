@@ -2,8 +2,10 @@ export default defineNuxtConfig({
   experimental: {
     appManifest: false,
   },
+
   modules: ['../src/module'],
   ssr: true,
+
   natlk: {
     baseURL: '/api',
     pages: {
@@ -31,5 +33,7 @@ export default defineNuxtConfig({
       auth: { enable: true },
     },
   },
+
   devtools: { enabled: true },
+  compatibilityDate: '2024-07-16',
 })
