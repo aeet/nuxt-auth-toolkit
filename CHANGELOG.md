@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.2
+
+[compare changes](https://github.com/devcui/nuxt-auth-toolkit/compare/v1.1.1...v1.1.2)
+
+### 🏡 Chore
+
+- Chore dependencies ([a9a370f](https://github.com/devcui/nuxt-auth-toolkit/commit/a9a370f))
+
+### ❤️ Contributors
+
+- Devcui ([@devcui](http://github.com/devcui))
+
 ## v1.1.1
 
 [compare changes](https://github.com/devcui/nuxt-auth-toolkit/compare/v1.1.0...v1.1.1)
