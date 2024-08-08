@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v1.1.3
+
+[compare changes](https://github.com/devcui/nuxt-auth-toolkit/compare/v1.1.2...v1.1.3)
+
+### 🩹 Fixes
+
+- Fix github ci ([7439be5](https://github.com/devcui/nuxt-auth-toolkit/commit/7439be5))
+- Fix github ci ([0cfb2ec](https://github.com/devcui/nuxt-auth-toolkit/commit/0cfb2ec))
+- Fix github ci ([6177008](https://github.com/devcui/nuxt-auth-toolkit/commit/6177008))
+- Fix middleware options ([75b5d63](https://github.com/devcui/nuxt-auth-toolkit/commit/75b5d63))
+
+### ❤️ Contributors
+
+- Devcui ([@devcui](http://github.com/devcui))
+
 ## v1.1.2
 
 [compare changes](https://github.com/devcui/nuxt-auth-toolkit/compare/v1.1.1...v1.1.2)
