@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.4
+
+[compare changes](https://github.com/devcui/nuxt-auth-toolkit/compare/v1.1.3...v1.1.4)
+
+### 🩹 Fixes
+
+- Fix jwt payload expires_time field ([35ad18e](https://github.com/devcui/nuxt-auth-toolkit/commit/35ad18e))
+
+### ❤️ Contributors
+
+- Devcui ([@devcui](http://github.com/devcui))
+
 ## v1.1.3
 
 [compare changes](https://github.com/devcui/nuxt-auth-toolkit/compare/v1.1.2...v1.1.3)
