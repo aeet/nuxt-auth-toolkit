@@ -20,8 +20,9 @@ export const useAccessToken = () => {
   const expires = computed(() => {
     if (!unref(token)) return null
     try {
-      const decoded = jwtDecode<{ exp: number }>(unref(token)!)
-      return decoded.exp * 1000
+      const decoded = jwtDecode<{ exp: number, expire_time: number }>(unref(token)!)
+      if (decoded.expire_time) return decoded.expire_time * 1000
+      if (decoded.exp) return decoded.exp * 1000
     }
     catch (e) {
       return null
