@@ -11,10 +11,10 @@ export const useAuthFailure = () => {
   const options = getOptions()
   const app = useNuxtApp()
   const { setReferer } = useReferer()
+  const { clearAccessToken } = useAccessToken()
+  const { clearRefreshToken } = useRefreshToken()
 
   const onAuthFailure = async (status = AuthStatus.Expired) => {
-    const { clearAccessToken } = useAccessToken()
-    const { clearRefreshToken } = useRefreshToken()
     const { fullPath: referer } = useRoute()
     clearAccessToken()
     clearRefreshToken()
