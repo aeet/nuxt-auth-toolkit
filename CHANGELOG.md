@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.6
+
+[compare changes](https://github.com/devcui/nuxt-auth-toolkit/compare/v1.1.5...v1.1.6)
+
+### 🩹 Fixes
+
+- Fix composables used outside of nuxt context ([3c08bf3](https://github.com/devcui/nuxt-auth-toolkit/commit/3c08bf3))
+
+### ❤️ Contributors
+
+- Devcui ([@devcui](http://github.com/devcui))
+
 ## v1.1.5
 
 [compare changes](https://github.com/devcui/nuxt-auth-toolkit/compare/v1.1.4...v1.1.5)
